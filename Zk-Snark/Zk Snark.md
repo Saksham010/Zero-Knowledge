@@ -1,0 +1,30 @@
+- Succinct proof that a statement is true
+- Small proof =>  |proof| = O(log(C),lambda)
+- Easy to verify => Verification time = O(|x|,log(C),lambda) which means:
+	- Verification doesn't read the whole circuit, Sv provides short summary of the circuit
+- Components
+	- Arithmetic circuits
+	- Argument system
+		- Interactive argument system
+		- Non interactive/Preprocessing  argument system (Requires trusted setup) 
+			- Three algorithm (S,P,V)
+				- S(C) => public parameter (Sp,Sv) for prover and verifier
+				- P(Sp,x,w) => Proof(pie)    --> Prover algorithm
+				- V(Sv,x,P) => Accept or Reject ---> Verifier algorithm
+			- Three properties
+				- Complete => For all x,w ->  C(x,w) =0, then V(Sv,x,p) = accept
+				- Soundness =>
+					- a) If V(Sv,x,p) = 1, then Prover knows witness 'w' st C(x,w) =0
+					- b) If malicious prover P* generates proof, then probability of V(Sv,x,p* ) = 1 => negligible
+				- Zeroknowledge => Reveals nothing about witness 'w' to verifier
+- Three types of trusted setup:
+	- Trusted per circuit: 
+		- S(C,r) , where r is secret and should not be leak other wise allows false proofs
+		- Trusted setup required per circuit
+	- Universal trusted setup:
+		- Independent of circuit
+		- Two steps:
+			- Initialization: S(lambda,r) = pp (Public parameter)
+			- Indexing: S(pp,C) = (Sp,Sv)
+	- Transparent setup:
+		- S(C) does not use secret data ie no trusted setup
