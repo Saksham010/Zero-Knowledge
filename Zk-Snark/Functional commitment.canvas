@@ -1,0 +1,18 @@
+{
+	"nodes":[
+		{"id":"4e6a7e529b90813a","type":"text","text":"(Function family)F = { f  : X ->Y }","x":-180,"y":-320,"width":300,"height":60},
+		{"id":"2e8fcb869e749780","type":"text","text":"Prover\n- Function f ε F\n- Setup(lamda) = pp (public paramenter)\n- Commitment(pp,f,r) = c\n- Proof(π) = Prover(pp,f,x,y,r)","x":-580,"y":-250,"width":400,"height":410},
+		{"id":"862295c4c81a647e","type":"text","text":"Verifier\n\n- x ε X\n- Verifier(pp,c,x,y,π) = accept or reject","x":240,"y":-225,"width":300,"height":365},
+		{"id":"bb7f3d1a4ee45c64","x":-116,"y":-71,"width":280,"height":53,"type":"text","text":"Request for evaluation at x ε X "},
+		{"id":"0465357cbb511676","x":-93,"y":-180,"width":227,"height":60,"type":"text","text":"Commitment (c)"},
+		{"id":"3145463b71388a26","x":-104,"y":20,"width":250,"height":60,"type":"text","text":"f(x) = y ε Y, proof(π)"}
+	],
+	"edges":[
+		{"id":"4a9ac84b99c89220","fromNode":"862295c4c81a647e","fromSide":"left","toNode":"bb7f3d1a4ee45c64","toSide":"right","color":"1"},
+		{"id":"56f8bab71a2117b5","fromNode":"2e8fcb869e749780","fromSide":"right","toNode":"0465357cbb511676","toSide":"left","color":"4"},
+		{"id":"35736c84a0e8b8f3","fromNode":"0465357cbb511676","fromSide":"right","toNode":"862295c4c81a647e","toSide":"left","color":"4"},
+		{"id":"c7070c85f8702781","fromNode":"bb7f3d1a4ee45c64","fromSide":"left","toNode":"2e8fcb869e749780","toSide":"right","color":"1"},
+		{"id":"ae7dc26fcfdc2023","fromNode":"2e8fcb869e749780","fromSide":"right","toNode":"3145463b71388a26","toSide":"left","color":"4"},
+		{"id":"52a7bb2bceef1326","fromNode":"3145463b71388a26","fromSide":"right","toNode":"862295c4c81a647e","toSide":"left","color":"4"}
+	]
+}

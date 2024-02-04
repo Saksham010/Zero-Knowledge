@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"4a55b365602b7213","x":-360,"y":-140,"width":100,"height":60,"type":"text","text":"Alice"},
+		{"id":"e4de500581789f97","x":80,"y":-130,"width":140,"height":50,"type":"text","text":"BOB"},
+		{"id":"af63cbd21e051ebf","x":-180,"y":-200,"width":220,"height":60,"type":"text","text":"Envelope containing message m"},
+		{"id":"ded97413718e1399","x":-446,"y":-40,"width":272,"height":160,"type":"text","text":"- Message(m)\n- Randomness(r)\n- Commit algorithm:\n\t- Commit(m,r) => c"},
+		{"id":"5697bb83b8563dea","x":-10,"y":20,"width":320,"height":160,"type":"text","text":"- Verify(m,r,c) => accept or reject"}
+	],
+	"edges":[
+		{"id":"e2cfa5ad833f41e9","fromNode":"4a55b365602b7213","fromSide":"right","toNode":"e4de500581789f97","toSide":"left","color":"4","label":"Commitment (c)"},
+		{"id":"8ab01870c6d6796b","fromNode":"ded97413718e1399","fromSide":"top","toNode":"4a55b365602b7213","toSide":"bottom","toEnd":"none"},
+		{"id":"14b2d2c261440015","fromNode":"4a55b365602b7213","fromSide":"right","toNode":"5697bb83b8563dea","toSide":"left"},
+		{"id":"2340acd59ff2542e","fromNode":"e4de500581789f97","fromSide":"bottom","toNode":"5697bb83b8563dea","toSide":"top","toEnd":"none"}
+	]
+}

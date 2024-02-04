@@ -1,0 +1,17 @@
+- Emulates real world envelope
+- [[Commitment scheme.canvas|Commitment scheme]]
+- Properties:
+	- Hiding\: 
+		- Commitment "c" reveals nothing about message "m", and 'r' is  uniformly sampled
+	- Binding :
+	    - Message cannot be changed after commitment
+	    - A commitment cannot be opened at two points ie (m1,r), ( m2,r)  such that verify(m1,r,c) == verify(m2,r,c) = accept
+	    - Only valid when, m1 != m2 for different commitments
+
+- Hash based commitments: 
+	- Commit(m,r) = H(m,r) => c
+	- Verify(m,r,c) = (H(m,r) == c) => accept or reject
+- [[Functional commitment.canvas|Functional commitment]] : 
+	- Linear commitment
+	- Multilinear commitment
+	- Polynomial commitment
